@@ -31,3 +31,7 @@ Route.group(() => {
     Route.resource('localities', 'LocalitiesController').except(['create', 'edit']).apiOnly()
   }).prefix('/v1')
 }).prefix('/api')
+
+Route.group(() => {
+  Route.get('home', 'HomeController.home')
+})

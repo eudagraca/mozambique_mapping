@@ -1,0 +1,37 @@
+<div class="text-center" id="province">
+    <h3>🇲🇿 Provinces</h3>
+    <h6 class="font-alt font-light">Insert province of <b>Mozambique.</b></h6>
+    <div class="divider"></div>
+    <form action="{{ route('provinces.store') }}" method="POST">
+       <div class="row">
+          <div class="col-6">
+             <div class="input-control"><input type="text" name="name" placeholder="Nome"></div>
+          </div>
+          <div class="col-6">
+             <div class="input-control"><input type="text" name="population" placeholder="Populacao"></div>
+          </div>
+          <div class="col-6">
+             <div class="input-control"><input type="text" name="area" placeholder="Area"></div>
+          </div>
+          <div class="col-6">
+             <div class="input-control"><input type="text" name="prefix" placeholder="Prefixo de tel"></div>
+          </div> 
+          <div class="col-6">
+             <div class="input-control"><input type="text" name="postal_code" placeholder="Codigo Postal"></div>
+          </div>
+          <div class="col-6">
+             <div class="input-control">
+                <select class="select" name="region" placeholder="Selecione a regiao">
+                   <option selected disabled>Selecione a regiao</option>
+                   <option value="Centro">Centro</option>
+                   <option value="Norte">Norte</option>
+                   <option value="Sul">Sul</option>
+                </select>
+             </div>
+          </div>
+       </div>
+       <div class="u-flex u-justify-flex-end">
+          <button type="submit" class="btn-info">Guardar</button>
+       </div>
+    </form>
+ </div>

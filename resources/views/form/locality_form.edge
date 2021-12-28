@@ -1,0 +1,25 @@
+<div class="text-center" id="locality">
+   <h3>🇲🇿 Localities</h3>
+   <h6 class="font-alt font-light">Insert Locality of <b>District</b></h6>
+   <div class="divider"></div>
+   <form action="{{ route('localities.store') }}" method="POST">
+      <div class="row">
+         <div class="col-6">
+            <div class="input-control"><input type="text" name="name" placeholder="Nome"></div>
+         </div>
+         <div class="col-6">
+            <div class="input-control">
+               <select class="select" name="district_id" placeholder="Selecione o distrito">
+                  <option selected disabled>Selecione a distrito</option>
+                  @each(district in districts)
+                  <option value="{{ district.id }}">{{ district.name }}</option>
+                  @end
+               </select>
+            </div>
+         </div>
+      </div>
+      <div class="u-flex u-justify-flex-end">
+         <button type="submit" class="btn-info">Guardar</button>
+      </div>
+   </form>
+</div>
